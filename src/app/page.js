@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import Experience from "./components/Experience";
 
 
 export default function Home() {
@@ -41,6 +42,7 @@ if(isDarkMode){
    <Header isDarkMode={isDarkMode}/>
    <About isDarkMode={isDarkMode}/>
    <Skills isDarkMode={isDarkMode}/>
+   <Experience isDarkMode={isDarkMode}/>
    <Projects isDarkMode={isDarkMode}/>
    <Contact isDarkMode={isDarkMode}/>
    <Footer isDarkMode={isDarkMode}/>
