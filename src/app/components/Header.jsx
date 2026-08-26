@@ -5,13 +5,13 @@ import { motion } from "motion/react"
 
 const Header = () => {
   return (
-    <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'>
+    <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4  pt-28 pb-10'>
         <motion.div 
         initial={{scale:0}}
         whileInView={{scale:1}}
         transition={{duration:0.8 ,type: 'spring', stiffness:100}}
         >
-            <Image src={assets.profile_img} alt="" className='rounded-full w-32 mt-15 xl:mt-25'/>
+            <Image src={assets.profile_img} alt="" className='rounded-full w-28 sm:w-32 mt-15 xl:mt-8'/>
         </motion.div>
         <motion.h3 
          initial={{y: -20 ,opacity:0}}
