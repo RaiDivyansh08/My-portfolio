@@ -7,6 +7,22 @@ const Navbar = ({isDarkMode,setIsDarkMode}) => {
     const [isScroll,setIsScroll]=useState(false);
     const sideMenuRef = useRef();
 
+    const toggleDarkMode = () => {
+  setIsDarkMode(prev => {
+    const newMode = !prev
+
+    if (newMode) {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('theme', 'dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('theme', 'light')
+    }
+
+    return newMode
+  })
+}
+
     const openMenu = () => {
     console.log("OPEN MENU CLICKED");
     sideMenuRef.current.style.transform = 'translateX(-16rem)';
@@ -36,7 +52,7 @@ const Navbar = ({isDarkMode,setIsDarkMode}) => {
         </a>
 
         <ul className={`hidden md:flex item-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll?"":"bg-white/50 shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent"} `}>
-            <li><a className='font-ovo' href="#top">Home</a></li>
+            <li><a className='font-ovo' href="/">Home</a></li>
             <li><a className='font-ovo' href="#about">About me</a></li>
             <li><a className='font-ovo' href="#project">Project</a></li>
             <li><a className='font-ovo' href="#skill">Skills</a></li>

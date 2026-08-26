@@ -8,11 +8,11 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
-
+import { useTheme } from './ThemeProvider'
 
 export default function Home() {
-  const [isDarkMode,setIsDarkMode]=useState(false);
-
+  // const [isDarkMode,setIsDarkMode]=useState(false);
+  const { isDarkMode, setIsDarkMode } = useTheme()
   useEffect(()=>{
      if(localStorage.theme==='dark'||(!('theme' in localStorage)&& window.matchMedia('(prefers-color-scheme:dark)').matches)){
       setIsDarkMode(true)
@@ -38,7 +38,10 @@ if(isDarkMode){
 
   return (
    <>
-   <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
+   <Navbar
+  isDarkMode={isDarkMode}
+  setIsDarkMode={setIsDarkMode}
+/>
    <Header isDarkMode={isDarkMode}/>
    <About isDarkMode={isDarkMode}/>
    <Skills isDarkMode={isDarkMode}/>
