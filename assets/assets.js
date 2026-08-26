@@ -41,14 +41,26 @@ import node from './node.png';
 import mysql from './mysql.png';
 import aws from './aws.png';
 import footer_bg_color from './footer-bg-color.png';
+import programming_icon from './programming_icon.png';
+import backend_icon from './backend_icon.png';
+import database_icon from './database.png';
+import cloud_icon from './cloud_icon.png';
+import tools_icon from './tools_icon.png';
+import learning_icon from './learning.png';
 
 export const assets = {
     user_image,
+    cloud_icon,
+    learning_icon,
+    programming_icon,
+    tools_icon,
+    database_icon,
     footer_bg_color,
     code_icon,
     code_icon_dark,
     edu_icon,
     edu_icon_dark,
+    backend_icon,
     project_icon,
     project_icon_dark,
     vscode,

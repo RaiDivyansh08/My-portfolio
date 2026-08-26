@@ -46,7 +46,7 @@ const Skills = ({isDarkMode}) => {
                 </span>
               ))}
             </div>
-            <a href={link} className=' flex items-center gap-2 text-sm mt-auto pt-5 justify-center'>Read more<Image src={isDarkMode?assets.right_arrow_white:assets.right_arrow} alt='' className=' w-4' /></a>
+            <a href="/skills" className=' flex items-center gap-2 text-sm mt-auto pt-5 justify-center'>Read more<Image src={isDarkMode?assets.right_arrow_white:assets.right_arrow} alt='' className=' w-4' /></a>
           </motion.div>
         ))}
       </motion.div>

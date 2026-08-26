@@ -1,9 +1,24 @@
+'use client'
 import Image from 'next/image'
 import React from 'react'
 import { assets } from '../../../assets/assets'
 import { motion } from "motion/react"
 
+import { useEffect, useState } from 'react'
 const Header = () => {
+    const [isDarkMode, setIsDarkMode] = useState(false)
+
+useEffect(() => {
+  const savedTheme = localStorage.getItem('theme')
+
+  if (savedTheme === 'dark') {
+    setIsDarkMode(true)
+    document.documentElement.classList.add('dark')
+  } else {
+    setIsDarkMode(false)
+    document.documentElement.classList.remove('dark')
+  }
+}, [])
   return (
     <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4  pt-28 pb-10'>
         <motion.div 
