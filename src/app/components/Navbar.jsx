@@ -53,10 +53,10 @@ const Navbar = ({isDarkMode,setIsDarkMode}) => {
 
         <ul className={`hidden md:flex item-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll?"":"bg-white/50 shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent"} `}>
             <li><a className='font-ovo' href="/">Home</a></li>
-            <li><a className='font-ovo' href="#about">About me</a></li>
-            <li><a className='font-ovo' href="#project">Project</a></li>
-            <li><a className='font-ovo' href="#skill">Skills</a></li>
-            <li><a className='font-ovo' href="#contect">Contect me</a></li>
+            <li><a className='font-ovo' href="/#about">About me</a></li>
+            <li><a className='font-ovo' href="/#project">Project</a></li>
+            <li><a className='font-ovo' href="/#skill">Skills</a></li>
+            <li><a className='font-ovo' href="/#contect">Contect me</a></li>
         </ul>
         <div className='flex items-center gap-4'>
         <button onClick={()=>setIsDarkMode(prev=>!prev)}><Image src={ isDarkMode?assets.sun_icon:assets.moon_icon} alt="" className='w-6'/></button>
