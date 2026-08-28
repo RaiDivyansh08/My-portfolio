@@ -67,16 +67,15 @@ const ProjectPage = () => {
 
 
     // Dark mode
-    useEffect(() => {
-
-        if (isDarkMode) {
-            document.documentElement.classList.add('dark')
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
-
-    }, [isDarkMode])
-
+   useEffect(() => {
+    if (isDarkMode) {
+        document.documentElement.classList.add('dark')
+        localStorage.setItem('theme', 'dark')
+    } else {
+        document.documentElement.classList.remove('dark')
+        localStorage.setItem('theme', 'light')
+    }
+}, [isDarkMode])
 
     // Project not found
     if (!project) {
